@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/headertag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/notify_text"
+        android:layout_margin="@dimen/small_margin"
+        android:textSize="@dimen/txt_normal"/>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_marginRight="@dimen/small_margin">
+
+        <EditText
+            android:id="@+id/matrixX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="@dimen/txt_normal"
+            android:hint="@string/xmatrix"
+            android:layout_weight="2"
+            android:layout_gravity="center"/>
+
+
+
+        <EditText
+            android:id="@+id/matrixY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="@dimen/txt_normal"
+            android:hint="@string/ymatrix"
+            android:layout_weight="2"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/openTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open Table"
+            android:textSize="@dimen/txt_normal"
+            android:layout_gravity="center"
+            android:layout_weight=".05"/>
+    </TableRow>
+    <TextView
+        android:id="@+id/headerspinnertag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/spinner_prompt"
+        android:layout_margin="@dimen/small_margin"
+        android:textSize="@dimen/txt_normal"/>
+
+    <Spinner
+        android:id="@+id/testcase_List"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:entries="@array/test_cases"
+        android:prompt="@string/spinner_prompt"
+        />
+
+    <TextView
+        android:id="@+id/titleColumn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:layout_margin="10dp"
+        android:textSize="@dimen/txt_head"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewMatrixGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/matrix_Grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:layout_margin="10dp"
+        android:textSize="@dimen/txt_matrix"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_output" />
+
+
+</LinearLayout>
